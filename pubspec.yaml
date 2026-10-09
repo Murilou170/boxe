@@ -26,3 +26,5 @@ flutter:
   assets:
     - assets/sounds/bell.wav
     - assets/sounds/warning.wav
+    - assets/sounds/som_inicio_round.mp3
+    - assets/sounds/10seconds.mp3

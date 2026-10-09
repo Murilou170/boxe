@@ -8,16 +8,16 @@ class AudioService {
     _player.setReleaseMode(ReleaseMode.stop);
   }
 
-  /// Toca o gongo (início de round ou fim de round / início de intervalo).
-  Future<void> playBell() async {
+  /// Toca o som de início/fim de round (som_inicio_round.mp3).
+  Future<void> playRoundBell() async {
     await _player.stop();
-    await _player.play(AssetSource('sounds/bell.wav'));
+    await _player.play(AssetSource('sounds/som_inicio_round.mp3'));
   }
 
-  /// Toca o aviso sonoro (10 segundos antes do fim do round).
+  /// Toca o aviso de 10 segundos (10seconds.mp3) no volume máximo.
   Future<void> playWarning() async {
     await _player.stop();
-    await _player.play(AssetSource('sounds/warning.wav'));
+    await _player.play(AssetSource('sounds/10seconds.mp3'), volume: 1.0);
   }
 
   /// Para qualquer som em reprodução.
